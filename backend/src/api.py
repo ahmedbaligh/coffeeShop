@@ -73,7 +73,7 @@ def post_drink(payload):
         abort(422)
 
     title = body['title']
-    recipe = json.dumps([body['recipe']])
+    recipe = json.dumps(body['recipe'])
     drink = Drink(title=title, recipe=recipe)
     drink.insert()
 
